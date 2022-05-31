@@ -18,9 +18,9 @@ const LoginPage = () => {
 					<div className="sign-up">
 						<p>
 							Don't have an account?
-							<a href="/#">Sign up</a>
+							<a href={() => false}>Sign up</a>
 						</p>
-						<a href="/#">Login via SSO</a>
+						<a href={() => false}>Login via SSO</a>
 					</div>
 				</div>
 			</div>

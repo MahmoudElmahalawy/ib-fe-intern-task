@@ -79,15 +79,16 @@
 			font-weight: bold;
 			color: $text-darker-color;
 
-			p a {
-				margin-left: 5px;
-			}
-
 			a {
 				display: inline-block;
 				text-decoration: none;
 				color: $btn-primary-color;
 				margin: 0.25rem 0;
+				cursor: pointer;
+			}
+
+			p a {
+				margin-left: 5px;
 			}
 		}
 	}
