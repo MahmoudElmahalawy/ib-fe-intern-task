@@ -1,7 +1,9 @@
+@import "../shared/variables";
+
 .login-page {
 	height: 100%;
 
-	.slider {
+	.slider-section {
 		height: 100vh;
 
 		&::after {
@@ -18,17 +20,101 @@
 			animation: scrollDownAnimation 2s infinite;
 		}
 	}
+
+	.login-section {
+		display: grid;
+		place-items: center;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+
+		.container {
+			display: grid;
+			place-items: center;
+			width: 80%;
+			text-align: center;
+		}
+
+		&__logo {
+			width: 100px;
+		}
+
+		&__title {
+			color: $text-darker-color;
+			font-weight: normal;
+			font-size: 2rem;
+			margin: 2rem 0;
+		}
+
+		.or {
+			width: 100%;
+			margin: 1rem 0;
+			font-weight: bold;
+			color: $text-darker-color;
+
+			&::before,
+			&::after {
+				content: "";
+				background-color: $border-light-color;
+				display: inline-block;
+				height: 1px;
+				position: relative;
+				vertical-align: middle;
+				width: 42%;
+			}
+
+			&::before {
+				right: 0.5em;
+				// margin-left: -50%;
+			}
+
+			&::after {
+				left: 0.5em;
+				// margin-right: -50%;
+			}
+		}
+
+		.sign-up {
+			width: 90%;
+			font-size: 14px;
+			font-weight: bold;
+			color: $text-darker-color;
+
+			p a {
+				margin-left: 5px;
+			}
+
+			a {
+				display: inline-block;
+				text-decoration: none;
+				color: $btn-primary-color;
+				margin: 0.25rem 0;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 768px) {
 	.login-page {
 		display: flex;
 
-		.slider {
+		.slider-section {
 			width: 50%;
 
 			&::after {
 				all: unset;
+			}
+		}
+
+		.login-section {
+			width: 50%;
+
+			.container {
+				width: 70%;
+			}
+
+			.sign-up {
+				display: flex;
+				justify-content: space-between;
 			}
 		}
 	}

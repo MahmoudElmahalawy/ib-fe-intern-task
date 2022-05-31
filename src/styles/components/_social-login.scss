@@ -1,0 +1,33 @@
+@import "../shared/variables";
+
+.social-login {
+	width: 90%;
+
+	.google-btn {
+		background-color: $google-btn-bg-color;
+		color: white;
+
+		.btn-logo {
+			background-color: white;
+			padding: 5px;
+			border-radius: 2px;
+		}
+	}
+
+	.github-btn {
+		background-color: $github-btn-bg-color;
+		color: white;
+	}
+
+	.microsoft-btn {
+		color: $text-dark-color;
+		border: 1px solid $border-dark-color;
+	}
+
+	.btn-logo {
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		height: 30px;
+	}
+}
