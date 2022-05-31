@@ -1,0 +1,52 @@
+.login-page {
+	height: 100%;
+
+	.slider {
+		height: 100vh;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: inline-block;
+			z-index: 2;
+			bottom: 5%;
+			right: 5%;
+			margin: 0 0.5em;
+			border: 15px solid transparent;
+			border-top: 15px solid white;
+			border-bottom: 0 none;
+			animation: scrollDownAnimation 2s infinite;
+		}
+	}
+}
+
+@media screen and (min-width: 991px) {
+	.login-page {
+		display: flex;
+
+		.slider {
+			width: 50%;
+
+			&::after {
+				all: unset;
+			}
+		}
+	}
+}
+
+@keyframes scrollDownAnimation {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0);
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+		transform: translate(0, 20px);
+	}
+	100% {
+		opacity: 0;
+	}
+}

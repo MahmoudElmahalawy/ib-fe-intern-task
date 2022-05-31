@@ -1,0 +1,63 @@
+@import "../shared/variables";
+
+.welcome-slider {
+	height: 100%;
+	background-color: $slider-bg-color;
+
+	.swiper-slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		// color: white;
+		// padding: 5rem;
+	}
+
+	img {
+		display: block;
+		width: 70%;
+		object-fit: cover;
+	}
+
+	p.slide-text {
+		text-align: center;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		color: white;
+		font-size: 1.5rem;
+		line-height: 1.5;
+		text-transform: capitalize;
+	}
+
+	.swiper-pagination {
+		position: relative;
+		text-align: center;
+		top: -15%;
+
+		.swiper-pagination-bullet {
+			display: inline-block;
+			background-color: transparent;
+			border: 1px solid white;
+			width: 0.75rem;
+			height: 0.75rem;
+			border-radius: 0.5rem;
+			margin-right: 5px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: white;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.welcome-slider {
+		p.slide-text {
+			font-size: 2.5rem;
+		}
+	}
+}
