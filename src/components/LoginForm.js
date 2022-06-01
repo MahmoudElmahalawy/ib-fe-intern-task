@@ -1,12 +1,19 @@
+import { useState, useEffect } from "react";
+
 import { useForm } from "react-hook-form";
 
 const LoginForm = () => {
+	const [buttonDisabled, setButtonDisabled] = useState();
+
 	const {
 		register,
 		handleSubmit,
 		getValues,
+		watch,
 		formState: { errors },
 	} = useForm();
+
+	const watchAllFields = watch();
 
 	const validatePassword = (value) => {
 		const emailName = getValues().email.split("@")[0];
@@ -19,6 +26,14 @@ const LoginForm = () => {
 	};
 
 	const onSubmit = (data) => console.log(data, errors);
+
+	useEffect(() => {
+		if (!(getValues().email && getValues().password)) {
+			setButtonDisabled(true);
+		} else {
+			setButtonDisabled(false);
+		}
+	}, [watchAllFields]);
 
 	return (
 		<form className="login-form" onSubmit={handleSubmit(onSubmit)}>
@@ -58,7 +73,7 @@ const LoginForm = () => {
 					Forgot password?
 				</a>
 			</div>
-			<button className="btn login-btn" type="submit">
+			<button className="btn login-btn" type="submit" disabled={buttonDisabled}>
 				Log in
 			</button>
 		</form>
