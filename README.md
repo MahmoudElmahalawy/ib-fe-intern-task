@@ -1,3 +1,11 @@
-## Live @
+# IB Internship Task
 
-[`https://ib-fe-intern-task.netlify.app/`](https://ib-fe-intern-task.netlify.app/).
+## Live app @
+
+[`https://ib-fe-intern-task.netlify.app/`](https://ib-fe-intern-task.netlify.app/)
+
+## To test with Cypress
+
+run command
+
+### `npm run cypress:open`
