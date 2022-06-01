@@ -72,7 +72,7 @@ const LoginForm = () => {
 			<div className="form-control">
 				<label htmlFor="email">Work Email</label>
 				<input
-					type="email"
+					type="text"
 					placeholder="you@company.com"
 					{...register("email", {
 						required: "Email address is required.",
