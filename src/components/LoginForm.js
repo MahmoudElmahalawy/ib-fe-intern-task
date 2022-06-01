@@ -49,7 +49,7 @@ const LoginForm = () => {
 		} else {
 			setIncorrectCreds(false);
 			localStorage.setItem(
-				"loggedUser",
+				"loggedInUser",
 				JSON.stringify({ username: data.email.split("@")[0], email: data.email })
 			);
 			navigate("/welcome");

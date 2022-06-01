@@ -1,12 +1,22 @@
 import { useEffect } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import WelcomeSlider from "../components/WelcomeSlider";
 import SocialLogin from "../components/SocialLogin";
 import LoginForm from "../components/LoginForm";
 
 const LoginPage = () => {
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		document.title = "Login | Instabug";
+
+		const userInLS = JSON.parse(localStorage.getItem("loggedInUser"));
+
+		if (userInLS) {
+			navigate("/");
+		}
 	}, []);
 
 	return (

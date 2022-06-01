@@ -1,0 +1,26 @@
+@import "../shared/variables";
+
+.not-found-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	&__image {
+		margin-bottom: 4rem;
+	}
+
+	&__title {
+		color: $slider-bg-color;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__text {
+		font-weight: bold;
+		color: $text-darker-color;
+		margin-top: 0.5rem;
+		margin-bottom: 4rem;
+	}
+}

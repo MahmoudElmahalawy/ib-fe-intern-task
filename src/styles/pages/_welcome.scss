@@ -1,0 +1,24 @@
+@import "../shared/variables";
+
+.welcome-page {
+	display: grid;
+	place-items: center;
+	max-width: 80%;
+	margin: 5rem auto;
+
+	&__text {
+		margin-bottom: 2rem;
+		font-weight: bold;
+
+		.user-email {
+			font-weight: lighter;
+			color: $slider-bg-color;
+		}
+	}
+
+	.log-out-btn {
+		max-width: 600px;
+		border: 1px solid $btn-primary-color;
+		color: $btn-primary-color;
+	}
+}
