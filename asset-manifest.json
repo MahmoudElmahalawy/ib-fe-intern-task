@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ib-fe-intern-task/static/css/main.38dc9c7a.css",
+    "main.js": "/ib-fe-intern-task/static/js/main.4709ed49.js",
+    "index.html": "/ib-fe-intern-task/index.html",
+    "main.38dc9c7a.css.map": "/ib-fe-intern-task/static/css/main.38dc9c7a.css.map",
+    "main.4709ed49.js.map": "/ib-fe-intern-task/static/js/main.4709ed49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38dc9c7a.css",
+    "static/js/main.4709ed49.js"
+  ]
+}
