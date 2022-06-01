@@ -30,12 +30,23 @@
 		.forgot-password {
 			position: absolute;
 			color: $text-light-color;
+			text-decoration: none;
 			font-size: 14px;
 			font-weight: bold;
 			white-space: nowrap;
 			top: 0;
 			right: 0;
 			cursor: pointer;
+		}
+
+		.form-inp-error {
+			border: 1px solid $error-color;
+		}
+
+		.form-text-error {
+			font-size: 12px;
+			text-align: left;
+			color: $error-color;
 		}
 	}
 

@@ -1,8 +1,14 @@
+import { useEffect } from "react";
+
 import WelcomeSlider from "../components/WelcomeSlider";
 import SocialLogin from "../components/SocialLogin";
 import LoginForm from "../components/LoginForm";
 
 const LoginPage = () => {
+	useEffect(() => {
+		document.title = "Login | Instabug";
+	}, []);
+
 	return (
 		<div className="login-page">
 			<div className="slider-section">
@@ -18,10 +24,20 @@ const LoginPage = () => {
 					<div className="sign-up">
 						<p>
 							Don't have an account?
-							<a href={() => false}>Sign up</a>
+							<a href="/#">Sign up</a>
 						</p>
-						<a href={() => false}>Login via SSO</a>
+						<a href="/#">Login via SSO</a>
 					</div>
+					{/* <div className="trusted-by">
+						<p className="trusted-by__text">Trusted by top companies</p>
+						<div className="trusted-by__logos">
+							<img src="/assets/logos/lyft-logo.svg" alt="Lyft" />
+							<img src="/assets/logos/buzzfeed-logo.svg" alt="Buzzfeed" />
+							<img src="/assets/logos/asana-logo.svg" alt="Asana" />
+							<img src="/assets/logos/oneplus-logo.svg" alt="Oneplus" />
+							<img src="/assets/logos/houseparty-logo.svg" alt="Houseparty" />
+						</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

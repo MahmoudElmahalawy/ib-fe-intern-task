@@ -4,7 +4,7 @@
 	height: 100%;
 
 	.slider-section {
-		height: 100vh;
+		height: 100%;
 
 		&::after {
 			content: "";
@@ -24,8 +24,8 @@
 	.login-section {
 		display: grid;
 		place-items: center;
-		padding-top: 4rem;
-		padding-bottom: 4rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 
 		.container {
 			display: grid;
@@ -42,7 +42,7 @@
 			color: $text-darker-color;
 			font-weight: normal;
 			font-size: 2rem;
-			margin: 2rem 0;
+			margin: 1rem 0 2rem;
 		}
 
 		.or {
@@ -89,6 +89,34 @@
 
 			p a {
 				margin-left: 5px;
+			}
+		}
+
+		.trusted-by {
+			width: 100%;
+			margin-top: 1rem;
+
+			&__text {
+				margin: 1rem 0;
+				font-size: 14px;
+				font-weight: bold;
+				color: $text-light-color;
+			}
+
+			&__logos {
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				gap: 30px;
+
+				// background-color: red;
+
+				img {
+					max-width: 60px;
+					filter: grayscale(1);
+					margin-bottom: 1rem;
+				}
 			}
 		}
 	}
